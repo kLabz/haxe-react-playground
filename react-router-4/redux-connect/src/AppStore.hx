@@ -18,7 +18,13 @@ class AppStore {
 			data: mapReducer(Action, data)
 		});
 
-		return createStore(rootReducer, null, null);
+		// create middleware normally, excepted you must use
+		// 'StoreBuilder.mapMiddleware' to wrap the Enum-based middleware
+		var middleware = Redux.applyMiddleware(
+			// Add middlewares here
+		);
+
+		return createStore(rootReducer, null, middleware);
 	}
 }
 
