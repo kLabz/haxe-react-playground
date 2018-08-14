@@ -9,3 +9,5 @@
 -lib redux
 -lib redux-connect
 
+-lib tink_macro:0.16.5
+
