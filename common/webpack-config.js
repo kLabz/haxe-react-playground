@@ -17,10 +17,10 @@ module.exports = function(config) {
     const dist = path.resolve(dirname, '.build');
 
     const plugins = [
-		new HtmlWebpackPlugin({
-			template: '!!pug-loader!res/index.pug'
-		}),
-	];
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, 'res/index.pug')
+    }),
+  ];
 
     if (useFriendlyErrors)
         plugins.push(
@@ -74,12 +74,16 @@ module.exports = function(config) {
                     }
                 },
                 {
+                  test: /\.pug$/,
+                  loader: 'pug-loader'
+                },
+                {
                     test: /\.(gif|png|jpg|svg)$/,
                     loader: 'file-loader',
                     options: {
                         name: '[name].[hash:7].[ext]',
                         options: {
-                            includePaths: [path.resolve(dirname, 'assets')]
+                            includePaths: [path.resolve(__dirname, 'assets')]
                         }
                     }
                 }

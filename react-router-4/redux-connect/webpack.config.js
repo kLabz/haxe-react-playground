@@ -1,7 +1,7 @@
-const webpackConfig = require('./scripts/webpack-config');
+const webpackConfig = require('../../common/webpack-config');
 
 module.exports = webpackConfig({
-  // dirname: __dirname,
+  dirname: __dirname,
   isProd: false,
   isHttps: true,
   useFriendlyErrors: true,
