@@ -1,0 +1,16 @@
+-debug
+-cp src
+-main Main
+-js .build/index.js
+
+-lib haxe-loader
+
+-lib react
+-lib react-router-4
+
+-lib redux
+-lib redux-connect
+
+# Let libs use ReactComponentOfPropsAndState
+-D react_deprecated_refs
+
