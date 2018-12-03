@@ -34,7 +34,7 @@ class MyComponent extends ReactComponentOfProps<Props> {
 				background: theme.palette.background.dark,
 				color: theme.palette.text.inverted,
 				"&::before": {
-					content: "pseudo-element",
+					content: '"pseudo-element"',
 					display: "block",
 					position: "relative"
 				}
