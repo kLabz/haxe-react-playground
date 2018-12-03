@@ -3,6 +3,7 @@
 -main App
 -js .build/index.js
 
+-lib classnames
 -lib react-next
 -lib material-ui
 -lib react-types

@@ -1,5 +1,6 @@
 # From haxelib
+-lib classnames:0.1.5
 -lib react-next:1.103.0
--lib material-ui:git:git@gitlab.com:k-labz/haxe-oss/haxe-material-ui.git#0.5.0
--lib react-types:git:git@gitlab.com:k-labz/haxe-oss/haxe-react-types.git#0.3.0
+-lib material-ui:git:git@gitlab.com:k-labz/haxe-oss/haxe-material-ui.git#0.5.1
+-lib react-types:git:git@gitlab.com:k-labz/haxe-oss/haxe-react-types.git#0.3.1
 

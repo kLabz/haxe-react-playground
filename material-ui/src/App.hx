@@ -2,20 +2,30 @@ package;
 
 import js.Browser;
 
-import react.ReactDOM;
-import react.ReactMacro.jsx;
 import mui.core.Button;
 import mui.core.CssBaseline;
 import mui.core.Grid;
 import mui.core.styles.MuiTheme.createMuiTheme;
 import mui.core.styles.MuiThemeProvider;
+import react.ReactDOM;
+import react.ReactMacro.jsx;
 
 class App {
 	public static function main() {
 		var wrapper = Browser.document.createElement("div");
 		Browser.document.body.appendChild(wrapper);
 
-		var theme = createMuiTheme({});
+		// Will be merged with default values from mui
+		var theme = createMuiTheme({
+			palette: {
+				background: {
+					dark: "#424242"
+				},
+				text: {
+					inverted: "#fefefe"
+				}
+			}
+		});
 
 		var app = ReactDOM.render(
 			jsx('
@@ -30,9 +40,9 @@ class App {
 								</$Button>
 							</$Grid>
 							<$Grid item>
-								<$Button color=${Secondary} variant=${Raised} fullWidth>
-									Test
-								</$Button>
+								<$MyComponent>
+									Test 2
+								</$MyComponent>
 							</$Grid>
 						</$Grid>
 					</>
