@@ -3,8 +3,7 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
-const haxeFormatter = require('haxe-loader/errorFormatter');
-const haxeTransformer = require('haxe-loader/errorTransformer');
+const haxeErrorParser = require('haxe-error-parser');
 
 module.exports = function(config) {
     const DEV_SERVER_PORT = config.serverPort || 9000;
@@ -31,8 +30,8 @@ module.exports = function(config) {
                     ],
                     notes: []
                 },
-                additionalTransformers: [haxeTransformer],
-                additionalFormatters: [haxeFormatter]
+                additionalTransformers: [haxeErrorParser.transform],
+                additionalFormatters: [haxeErrorParser.format]
             })
         );
 

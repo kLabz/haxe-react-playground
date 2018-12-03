@@ -1,6 +1,7 @@
 {
   "devDependencies": {
     "friendly-errors-webpack-plugin": "github:kLabz/friendly-errors-webpack-plugin",
+    "haxe-error-parser": "0.1.1",
     "haxe-loader": "github:kLabz/webpack-haxe-loader#fork",
     "html-webpack-plugin": "3.2.0",
     "pug": "2.0.3",
