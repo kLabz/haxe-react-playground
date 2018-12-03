@@ -17,10 +17,10 @@ module.exports = function(config) {
     const dist = path.resolve(dirname, '.build');
 
     const plugins = [
-    new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, 'res/index.pug')
-    }),
-  ];
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, 'res/index.pug')
+        }),
+    ];
 
     if (useFriendlyErrors)
         plugins.push(

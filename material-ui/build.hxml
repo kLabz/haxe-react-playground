@@ -1,0 +1,12 @@
+-debug
+-cp src
+-main App
+-js .build/index.js
+
+-lib react-next
+-lib material-ui
+-lib react-types
+
+# Let libs use ReactComponentOfPropsAndState
+# -D react_deprecated_refs
+
